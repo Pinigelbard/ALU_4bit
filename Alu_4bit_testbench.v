@@ -1,4 +1,4 @@
-module ALU (x,y,a,b,opcode)
+module ALU (x,y,a,b,opcode);
 input [3:0] a,b,opcode;
 output reg [3:0]x,y;
 always @(a,b,opcode)
@@ -19,6 +19,6 @@ always @(a,b,opcode)
 		4'b1101: {y,x} = a>>b;
 		4'b1110: {y,x} = a<<b;
 		4'b1111: x= ~a;
-		default: $display("error")
+		default: $display("error");
 	endcase
 endmodule
